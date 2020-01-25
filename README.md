@@ -10,11 +10,6 @@ The evaluation metric for this competition is RMSE (root mean squared error) ove
 
 #### Train and test data
 Under Problem Statement section - https://datahack.analyticsvidhya.com/contest/vista-codefest-computer-vision-1/ 
-1. train.zip: Contains 2 csvs and 1 folder containing image data
--a. train.csv - ['Name', 'HeadCount'] (contains headcount value for each training image)
--b. bbox_train.csv - ['Name', 'width', 'height' , 'xmin', 'ymin', 'xmax', 'ymax', 'class'] (contains co-ordinates of each head in the ------train image, located by the formation of a bound-box around the head)
-2. test.csv - ['Name'] (contains only name of testing images)
-3. sample_submission.csv - ['Name', 'HeadCount'] (contains format for a valid submission)
 
 #### Hardware
 Cloud instance with GPU (GCP)
@@ -51,4 +46,18 @@ As observed from images it looks like bounding box sizes are varying from very s
 
 One sample image with predicted bounding boxes.
 ![](Output.jpg)
+
+#### Process
+1. Need to configure the TensorFlow Object Detection API
+2. Build an image dataset + image annotations in the TensorFlow Object Detection API Form 
+3. Train a Faster R-CNN on the dataset
+4. Predict the testset images.
+
+Download or clone TFOD API - https://github.com/tensorflow/models. Complete code is in faces_count folder (https://github.com/AbhinayReddyYarva/FaceCountingChallenge-AnalyticsVidhya/tree/master/faces_count)
+
+Train and test data is placed in faces_count/faces folder (https://github.com/AbhinayReddyYarva/FaceCountingChallenge-AnalyticsVidhya/tree/master/faces_count/faces).
+
+Build dataset with images and annotations in TFOD API form using faces_count/build_faces_records.py (https://github.com/AbhinayReddyYarva/FaceCountingChallenge-AnalyticsVidhya/blob/master/faces_count/build_faces_records.py)
+
+
 

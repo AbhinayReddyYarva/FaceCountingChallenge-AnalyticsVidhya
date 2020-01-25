@@ -1,4 +1,4 @@
-time python3 faces_count/build_faces_records.py
+#### time python3 faces_count/build_faces_records.py
 
 When above command is successfully ran then below files will be created.
 

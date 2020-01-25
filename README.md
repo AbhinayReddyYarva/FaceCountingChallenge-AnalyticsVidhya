@@ -42,7 +42,7 @@ When observed the bounding boxes of training dataset there are many faces with b
 
 Model res10_300x300_ssd_iter_140000_fp16.caffemodel and opencv_face_detector_uint8.pb will work well if face is near to camera but will not work well on half face or blur or small.
 
-As observed from images it looks like bounding box sizes are varying from very small to large, so thought to use Faster RCNN network than other networks like SSD, Yolo or RetinaNet because RPN tends to give good results for localizing smaller objects as we get more proposals for bounding boxes. Even other networks also can get similar accuracy more inference speed. To use faster RCNN model as inference model we can go for quantization tecnique for 16FLOP or 8FLOP and also can train with architecture pruning once after reaching maximum accuracy.
+As observed from images it looks like bounding box sizes are varying from very small to large, so thought to do transfer learning useing Faster RCNN network than other networks like SSD, Yolo or RetinaNet because RPN tends to give good results for localizing smaller objects as we get more proposals for bounding boxes. Even other networks also can get similar accuracy more inference speed. To use faster RCNN model as inference model we can go for quantization tecnique for 16FLOP or 8FLOP and also can train with architecture pruning once after reaching maximum accuracy.
 
 One sample image with predicted bounding boxes.
 ![](Output.jpg)

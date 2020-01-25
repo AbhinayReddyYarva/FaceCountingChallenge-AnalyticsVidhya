@@ -16,4 +16,18 @@ RAM -> 120GB (64GB RAM is minimum to have 4 P100 16GB GPUs in GCP instance).
 #### Framework 
 Tensorflow Object Detection API - https://github.com/tensorflow/models
 
+### Journey
+Initially I tried with mostly used and popular networks used in OpenCV to make it as base RMSE score.
+1. FP16 version of the original caffe implementation (res10_300x300_ssd_iter_140000_fp16.caffemodel)
+2. 8 bit Quantized version using Tensorflow (opencv_face_detector_uint8.pb)
+
+Using res10_300x300_ssd_iter_140000_fp16.caffemodel got 2.76 RMSE score
+![](faces_count/AV-Scores/res10ssd.JPG)
+Using opencv_face_detector_uint8.pb got 2.73 RMSE score
+![](faces_count/AV-Scores/opencvfacedetector.JPG)
+
+Implimentation of above models can be found in faces_count/facecounts2.py (https://github.com/AbhinayReddyYarva/FaceCountingChallenge-AnalyticsVidhya/blob/master/faces_count/facecounts2.py)
+
+To view the images with bounding boxes of training set images please go through the file faces_count/visual.py (https://github.com/AbhinayReddyYarva/FaceCountingChallenge-AnalyticsVidhya/blob/master/faces_count/visual.py) 
+When observed the bounding boxes of training dataset there are many faces with blur, side, straight half, side half, small (captured from far). Below are some sameple images with bounding boxes. 
 

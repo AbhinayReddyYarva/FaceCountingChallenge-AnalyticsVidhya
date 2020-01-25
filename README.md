@@ -1,4 +1,4 @@
-# Face Counting Challenge - 2nd rank - Analytics Vidhya Hackathon - Active competition
+# Face Counting Challenge - 2nd rank - Active competition - Analytics Vidhya Hackathon
 
 Link - https://datahack.analyticsvidhya.com/contest/vista-codefest-computer-vision-1/
 
@@ -7,4 +7,13 @@ People detection and head counting is one of the classical albeit challenging co
 
 #### Evaluation Metric
 The evaluation metric for this competition is RMSE (root mean squared error) over the head counts predicted for test images.
+
+#### Hardware
+Cloud instance with GPU (GCP)
+GPU -> 4, P100 16GB GPUs
+RAM -> 120GB (64GB RAM is minimum to have 4 P100 16GB GPUs in GCP instance). 
+
+#### Framework 
+Tensorflow Object Detection API - https://github.com/tensorflow/models
+
 

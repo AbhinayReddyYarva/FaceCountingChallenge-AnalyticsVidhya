@@ -1,0 +1,3 @@
+python3 object_detection/export_inference_graph.py --input_type=image_tensor --pipeline_config_path=faces_count/faces/experiments/training/faster_rcnn_faces.config --trained_checkpoint_prefix=faces_count/faces/experiments/training/model.ckpt-20000 --output_directory=faces_count/faces/experiments/exported_model
+
+With above command model can be saved to this folder for inference use if needed with all required details including frozen inference graph. Just including here that it might be useful for someone.

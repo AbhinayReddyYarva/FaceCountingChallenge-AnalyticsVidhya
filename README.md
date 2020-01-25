@@ -8,6 +8,14 @@ People detection and head counting is one of the classical albeit challenging co
 #### Evaluation Metric
 The evaluation metric for this competition is RMSE (root mean squared error) over the head counts predicted for test images.
 
+#### Train and test data
+Under Problem Statement section - https://datahack.analyticsvidhya.com/contest/vista-codefest-computer-vision-1/ 
+1. train.zip: Contains 2 csvs and 1 folder containing image data
+-a. train.csv - ['Name', 'HeadCount'] (contains headcount value for each training image)
+-b. bbox_train.csv - ['Name', 'width', 'height' , 'xmin', 'ymin', 'xmax', 'ymax', 'class'] (contains co-ordinates of each head in the ------train image, located by the formation of a bound-box around the head)
+2. test.csv - ['Name'] (contains only name of testing images)
+3. sample_submission.csv - ['Name', 'HeadCount'] (contains format for a valid submission)
+
 #### Hardware
 Cloud instance with GPU (GCP)
 GPU -> 4, P100 16GB GPUs
@@ -41,4 +49,6 @@ Model res10_300x300_ssd_iter_140000_fp16.caffemodel and opencv_face_detector_uin
 
 As observed from images it looks like bounding box sizes are varying from very small to large, so thought to use Faster RCNN network than other networks like SSD, Yolo or RetinaNet because RPN tends to give good results for smaller objects and also we get more proposals for bounding boxes. Even other networks also can get similar accuracy more inference speed. To use faster RCNN model as inference model we can go for quantization tecnique for 16FLOP or 8FLOP and also can train with architecture pruning once after reaching maximum accuracy.
 
-One sample output image with bounding boxes.
+One sample image with predicted bounding boxes.
+![](Output.jpg)
+

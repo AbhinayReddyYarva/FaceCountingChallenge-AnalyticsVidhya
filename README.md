@@ -1,4 +1,4 @@
-# Face Counting Challenge - 2nd rank - Analytics Vidhya Hackathon 
+# Face Counting Challenge - 2nd rank - Analytics Vidhya Hackathon - Active competition
 
 Link - https://datahack.analyticsvidhya.com/contest/vista-codefest-computer-vision-1/
 
